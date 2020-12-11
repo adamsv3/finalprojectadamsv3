@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Allergen Product Finder</title>
+</head>
+<style>
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+</style>
+<style>
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+</style>
+<body>
+<div class="header">
+    <h1>Welcome to the allergen indicator!</h1>
+    <p>Choose your product and your allergen and see if you're good!</p>
+</div>
+    <br /><br />
+<div class = "content">
+<form action = "/allergenornot", method = post>
+    <label for="foodlist">Choose a food:</label>
+    <select id="foodlist" name="food">
+        {% for i in list %}
+            <option value = "{{ i }}">{{ i }}</option>
+        {% endfor %}
+    </select><br /><br />
+    <label for = "allergenlist">Choose an allergen:</label>
+    <select id = "allergenlist" name = "allergen">
+        <option value = "Gluten">Gluten</option>
+        <option value = "Dairy">Dairy</option>
+        <option value = "Eggs">Eggs</option>
+        <option value = "Vegan">Vegan</option>
+        <option value = "Vegetarian">Vegetarian</option>
+    </select><br /><br />
+    <input type = "submit" value = "Go" name = "gobtn"/>
+</form>
+</div>
+</body>
+</html>
