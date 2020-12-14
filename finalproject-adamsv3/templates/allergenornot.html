@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
+<style>
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #D39E4D;
+  color: white;
+  font-size: 30px;
+  border-radius: 25px;
+}
+</style>
+
 <body>
-<p>{{allergen}}</p>
-<p>{{response}}</p>
-<p>{{ingredient}}</p>
+<div class = header>
+    <h1>What's the verdict...</h1>
+</div>
+    <p>Your allergen: {{allergen}}</p>
+    <p>Your product: {{food}}</p>
+    <p>Verdict: {{response}}</p>
+    <p>{{ingredient}}</p>
+
 </body>
 </html>
