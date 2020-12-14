@@ -14,16 +14,27 @@
   font-size: 30px;
   border-radius: 25px;
 }
+
+.content {
+  margin: auto;
+  font-size: 30px;
+  text-align: center;
+}
+
 </style>
 
 <body>
 <div class = header>
     <h1>What's the verdict...</h1>
 </div>
+<div class = content>
     <p>Your allergen: {{allergen}}</p>
     <p>Your product: {{food}}</p>
     <p>Verdict: {{response}}</p>
-    <p>{{ingredient}}</p>
+    <button><a href="/">Search another product</a></button>
+</div>
+
+
 
 </body>
 </html>
